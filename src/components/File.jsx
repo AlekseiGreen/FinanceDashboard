@@ -5,7 +5,7 @@ import Logic from './Logic';
 
 class MainMain extends Component {
 
-    constructor(props){  
+    constructor(props){
         super(props);
         this.state = {
             count: 0,
