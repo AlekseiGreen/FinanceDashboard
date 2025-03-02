@@ -23,7 +23,7 @@ class MainMain extends Component {
             return {device: i_count + 1};
         }
         return <div className='main'>
-            <Logic></Logic>
+            <Logic /><Logic />
             <div>MainMain</div>
             <button onClick={()=>this.setState(useState(this.state.count))}>Header</button>
             <div>count={this.state.count}</div>

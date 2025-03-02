@@ -1,4 +1,4 @@
-.footer{
+footer{
     background-color: Gray;
     position: fixed;
     left: 0;
@@ -7,4 +7,6 @@
     text-align: center;
     line-height: 22px;
     z-index: 1000;
+
+    color: white;
 }

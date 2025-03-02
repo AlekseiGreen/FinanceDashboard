@@ -5,7 +5,7 @@ import './Header.css';
 
 function Header(){
     return(
-        <div className='header'>
+        <div className='header' onMouseMove={console.log('MOVE')}>
             <Link to="/" className='header-link'>File</Link>
             <Link to="/about" className='header-link'>Edit</Link>
             <Link to="/contact" className='header-link'>Help</Link>

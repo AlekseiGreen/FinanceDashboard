@@ -1,50 +1,62 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 import "./Logic.css";
 
 
-class Logic extends Component{
-    render(){
-        return <div className="valve">
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
 
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
-            <h1>VALVE</h1>
 
-            <h1>VALVE</h1>
-
-            </div>
-    }
-
-    componentDidMount() {
-        console.log('componentDidMount');
-    }
-
-    componentWillUnmount() {
-        console.log('componentWillUnmount');
-    }
-
-    componentDidUpdate() {
-        console.log('componentDidUpdate');
-    }
-}
+const Logic = () => {
+    const [isDragging, setIsDragging] = useState(false);
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [offset, setOffset] = useState({ x: 0, y: 0 });
+  
+    // Начало перетаскивания
+    const handleMouseDown = (e) => {
+      setIsDragging(true);
+  
+      // Вычисляем смещение курсора относительно верхнего левого угла квадрата
+      setOffset({
+        x: e.clientX - position.x,
+        y: e.clientY - position.y,
+      });
+      console.log("Координата X=", e.clientX);
+      console.log("Координата Y=", e.clientY);
+    };
+  
+    // Перетаскивание
+    const handleMouseMove = (e) => {
+      if (isDragging) {
+        // Обновляем позицию квадрата
+        setPosition({
+          x: e.clientX - offset.x,
+          y: e.clientY - offset.y,
+        });
+      }
+    };
+  
+    // Завершение перетаскивания
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+  
+    return (
+      <div
+        style={{
+          position: "absolute",
+          left: position.x,
+          top: position.y,  
+          width: "100px",
+          height: "100px",
+          backgroundColor: "lightblue",
+          border: "2px solid blue",
+          cursor: "move",
+        }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+      >
+        Перетащи меня
+      </div>
+    );
+  };
 
 export default Logic;
