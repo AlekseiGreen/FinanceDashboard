@@ -1,18 +1,6 @@
-// import React, { Component } from 'react';
-// import './Footer.css';
-
-// function Footer() {
-//     return(
-//         <div className="footer">
-//             Footer
-//         </div>
-//     )
-// }
-
-// export default Footer;
-
-
 import React, { useState, useEffect } from "react";
+import './Footer.css';
+
 
 const Footer = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
