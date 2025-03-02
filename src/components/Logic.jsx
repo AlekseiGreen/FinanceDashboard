@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import "./Valve.css";
+import "./Logic.css";
 
 
-class Valve extends Component{
+class Logic extends Component{
     render(){
         return <div className="valve">
             <h1>VALVE</h1>
@@ -47,4 +47,4 @@ class Valve extends Component{
     }
 }
 
-export default Valve;
+export default Logic;

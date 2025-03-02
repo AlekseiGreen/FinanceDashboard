@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './File.css';
-import Valve from './Valve';
+import Logic from './Logic';
 
 
 class MainMain extends Component {
@@ -23,7 +23,7 @@ class MainMain extends Component {
             return {device: i_count + 1};
         }
         return <div className='main'>
-            <Valve></Valve>
+            <Logic></Logic>
             <div>MainMain</div>
             <button onClick={()=>this.setState(useState(this.state.count))}>Header</button>
             <div>count={this.state.count}</div>
