@@ -1,0 +1,9 @@
+.main{
+    box-sizing: border-box; 
+    background-color: #D3D3D3;
+    border: 2px solid grey;
+    min-height: calc(100vh);
+    padding-top: 22px; 
+    padding-bottom: 22px; 
+    overflow: auto;
+}

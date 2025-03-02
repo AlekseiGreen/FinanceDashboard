@@ -1,0 +1,10 @@
+.footer{
+    background-color: Gray;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 22px;
+    z-index: 1000;
+}

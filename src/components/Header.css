@@ -1,0 +1,15 @@
+.header{
+    position: fixed; /* Фиксируем хэдер */  
+    top: 0; /* Прижимаем к верху */
+    left: 0;
+    right: 0;
+    background-color: DarkGray;
+    height: 22px; 
+    z-index: 1000;
+}
+
+.header-link{
+    margin-left: 30px;
+    text-decoration: none;
+    color: rgb(50,50,50);
+}
