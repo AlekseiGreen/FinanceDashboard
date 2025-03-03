@@ -7,7 +7,6 @@
     
     background-color: #D3D3D3;
     min-height: calc(100dvh);
-    /* min-height: calc(100dvh - var(--header-height) - var(--footer-height)); */
     padding-top: var(--header-height);
     padding-bottom: var(--footer-height);
 }
