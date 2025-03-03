@@ -25,6 +25,10 @@ class MainMain extends Component {
         return <div className='main'>
             {/* <Logic />
             <Logic /> */}
+            <h1>M</h1>
+            <h1>M</h1><h1>M</h1>
+
+
             <div>MainMain</div>
             <button onClick={()=>this.setState(useState(this.state.count))}>Header</button>
             <div>count={this.state.count}</div>

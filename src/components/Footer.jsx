@@ -7,7 +7,7 @@ const Footer = () => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      setMousePosition({ x: e.clientX, y: (e.clientY-22) });
     };
 
     window.addEventListener("mousemove", handleMouseMove);

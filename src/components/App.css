@@ -1,4 +1,4 @@
-.app{
-    /* position: relative; */
-    /* min-height: 100%; */
+:root{
+    --header-height: 22px;
+    --footer-height: 22px;
 }
