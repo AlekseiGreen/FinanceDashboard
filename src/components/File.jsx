@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './File.css';
-import Logic from './Logic';
+import Logic from './Logic.jsx';
 
 
 class MainMain extends Component {
@@ -22,6 +22,7 @@ class MainMain extends Component {
         function fn(i_count){
             return {device: i_count + 1};
         }
+
         return <div className='main'>
             <Logic />            
             <div>MainMain</div>
@@ -29,6 +30,8 @@ class MainMain extends Component {
             <div>count={this.state.count}</div>
             <button onClick={()=>this.setState(fn(this.state.device))}>Header</button>
             <div>device={this.state.device}</div>
+            {/* <audio id="notif" src="../assets/zvuk2.mp3"></audio>
+            <button id="playButton">Проиграть звук</button> */}
         </div>;
     }
 
